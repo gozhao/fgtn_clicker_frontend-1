@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #261104;
+}
+
+.coin {
+    width: 200px;
+    height: 200px;
+    border: 3px solid gold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.LOGO {
+    color: gold;
+    font-size: 50px;
+  }
+
+#counter {
+    font-size: 48px;
+}
+
+.click-animation {
+    position: absolute;
+    color: #ff5733;
+    font-size: 24px;
+    font-weight: bold;
+    animation: float 1.5s ease-out;
+}
+
+@keyframes float {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-100px); }
+}
