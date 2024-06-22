@@ -4,6 +4,16 @@
     overflow: hidden;
   }
 
+.coin {
+  position: absolute;
+  display: inline-block;
+  font-size: 24px;
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+  transform: translateY(0);
+  pointer-events: none; /* Prevents click events on the coin itself */
+}
+
 body {
     display: flex;
     justify-content: center;
