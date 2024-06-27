@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
 
-  body {
+body {
     background-color: #121212;
     color: #ffffff;
     font-family: Arial, sans-serif;
@@ -35,7 +35,11 @@ h1, h2 {
     background: radial-gradient(#e6646400, gold);
     position: relative;
     box-shadow: 0 0 15px gold;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hidden {
+    display: none;
 }
 
 .click-animation {
@@ -54,4 +58,10 @@ h1, h2 {
 @keyframes move-up {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50px); }
+}
+
+@keyframes coin-burst {
+    0% { transform: scale(1); background-color: gold; }
+    50% { transform: scale(2); background-color: white; }
+    100% { transform: scale(1); background-color: gold; }
 }
