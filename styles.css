@@ -4,13 +4,24 @@
     overflow: hidden;
   }
 
-body {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    background-color: #261104;
+    margin: 0;
+    user-select: none;
+    overflow: hidden;
 }
+
+h1, h2 {
+    margin: 10px;
+}
+
 .coin {
     width: 200px;
     height: 200px;
@@ -19,22 +30,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-.LOGO {
+    font-size: 24px;
     color: gold;
-    font-size: 50px;
-  }
-#counter {
-    font-size: 48px;
+    background: radial-gradient(#e6646400, gold);
+    position: relative;
+    box-shadow: 0 0 15px gold;
+    transition: transform 0.3s ease;
 }
+
 .click-animation {
     position: absolute;
-    color: #ff5733;
-    font-size: 24px;
-    font-weight: bold;
-    animation: float 1.5s ease-out;
+    pointer-events: none;
+    font-size: 20px;
+    color: gold;
+    animation: fade-out 1s ease, move-up 1s ease;
 }
-@keyframes float {
-    0% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-100px); }
+
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes move-up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
 }
